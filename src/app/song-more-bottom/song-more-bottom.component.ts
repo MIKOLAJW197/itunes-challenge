@@ -11,8 +11,4 @@ export class SongMoreBottomComponent {
 
   constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public data: Song) {
   }
-
-  onShare() {
-
-  }
 }
