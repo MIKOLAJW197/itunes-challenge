@@ -1,3 +1,4 @@
+<h2 *ngIf="authorsList.size" class="mt-2 ml-3">Top Artists:</h2>
 <div class="d-flex flex-nowrap overflow-auto">
   <mat-card *ngFor="let author of authorsList" class="card-horizontal d-flex justify-content-center align-items-center"
             (click)="onAuthorClick(author)">
