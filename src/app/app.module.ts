@@ -10,7 +10,7 @@ import {TopSongsListComponent} from './top-songs-list/top-songs-list.component';
 import {ApiService} from './shared/api.service';
 import {HttpClientModule} from '@angular/common/http';
 import {MainPageComponent} from './main-page/main-page.component';
-import {LazyLoadImageModule} from 'ng-lazyload-image';
+import {LazyLoadImageModule, scrollPreset} from 'ng-lazyload-image';
 import {SongMoreBottomComponent} from './song-more-bottom/song-more-bottom.component';
 import {TopCategoriesListComponent} from './top-categories-list/top-categories-list.component';
 import {FilteredSongsModalComponent} from './filtered-songs-modal/filtered-songs-modal.component';
@@ -33,7 +33,9 @@ import {SongDetailsModalComponent} from './song-details-modal/song-details-modal
     BrowserAnimationsModule,
     HttpClientModule,
     MaterialModule,
-    LazyLoadImageModule
+    LazyLoadImageModule.forRoot({
+      preset: scrollPreset
+    })
   ],
   providers: [ApiService],
   bootstrap: [AppComponent],
