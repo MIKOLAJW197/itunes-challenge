@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/itunes-challenge",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
