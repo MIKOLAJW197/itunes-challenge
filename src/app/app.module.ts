@@ -15,6 +15,8 @@ import {SongMoreBottomComponent} from './song-more-bottom/song-more-bottom.compo
 import {TopCategoriesListComponent} from './top-categories-list/top-categories-list.component';
 import {FilteredSongsModalComponent} from './filtered-songs-modal/filtered-songs-modal.component';
 import {SongDetailsModalComponent} from './song-details-modal/song-details-modal.component';
+import {SearchPipe} from './shared/pipes/search.pipe';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import {SongDetailsModalComponent} from './song-details-modal/song-details-modal
     SongMoreBottomComponent,
     TopCategoriesListComponent,
     FilteredSongsModalComponent,
-    SongDetailsModalComponent
+    SongDetailsModalComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import {SongDetailsModalComponent} from './song-details-modal/song-details-modal
     MaterialModule,
     LazyLoadImageModule.forRoot({
       preset: scrollPreset
-    })
+    }),
+    FormsModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent],

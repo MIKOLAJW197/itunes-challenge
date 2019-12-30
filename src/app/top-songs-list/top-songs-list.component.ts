@@ -12,6 +12,7 @@ import {SongDetailsModalComponent} from '../song-details-modal/song-details-moda
 export class TopSongsListComponent {
 
   @Input() songsList: Song[];
+  query: any;
 
   constructor(public bottomSheet: MatBottomSheet,
               public modalDialog: MatDialog) {

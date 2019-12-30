@@ -1,5 +1,8 @@
 <div class="container">
-  <mat-card *ngFor="let song of songsList" [id]="song.id" (click)="openDetails(song)" class="song-card">
+  <mat-form-field class="w-100 m-2 input-query">
+    <input matInput placeholder="Look for your favourite song:" [(ngModel)]="query">
+  </mat-form-field>
+  <mat-card *ngFor="let song of songsList | search: query" [id]="song.id" (click)="openDetails(song)" class="song-card">
     <mat-card-header>
       <div mat-card-avatar class="song-card__avatar" [lazyLoad]="song.img"></div>
       <div class="w-100">
