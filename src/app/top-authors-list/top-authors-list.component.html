@@ -1,0 +1,7 @@
+<div class="scrolling-wrapper">
+  <mat-card *ngFor="let author of authorsList" class="card-horizontal" (click)="onAuthorClick(author)">
+    <mat-card-header>
+      <mat-card-title class="card-horizontal__title">{{author}}</mat-card-title>
+    </mat-card-header>
+  </mat-card>
+</div>

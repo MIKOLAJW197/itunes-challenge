@@ -1,0 +1,20 @@
+<div class="header-wrapper">
+  <div>
+    <h1 mat-dialog-title>{{data.title}}</h1>
+    <h2 mat-dialog-title>{{data.author}}</h2>
+  </div>
+  <button mat-icon-button (click)="onCloseClick()">
+    <mat-icon aria-label="Close">close</mat-icon>
+  </button>
+</div>
+<div mat-dialog-content>
+  <p>
+    {{data.details.price}}
+  </p>
+  <p>
+    {{data.details.date | date}}
+  </p>
+  <p>
+    {{data.details.rights}}
+  </p>
+</div>

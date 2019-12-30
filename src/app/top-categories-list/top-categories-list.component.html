@@ -1,0 +1,7 @@
+<div class="scrolling-wrapper">
+  <mat-card *ngFor="let category of categoriesList" class="card-horizontal" (click)="onCategoryClick(category)">
+    <mat-card-header>
+      <mat-card-title class="card-horizontal__title">{{category}}</mat-card-title>
+    </mat-card-header>
+  </mat-card>
+</div>

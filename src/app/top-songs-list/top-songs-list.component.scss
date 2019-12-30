@@ -1,0 +1,26 @@
+.song-card {
+  cursor: pointer;
+  margin: 20px;
+
+  &__avatar {
+    width: 70px;
+    height: 70px;
+  }
+
+  &__text-wrapper {
+    width: 100%;
+
+    &__title {
+    }
+
+    &__subtitle {
+      text-align: left;
+    }
+
+  }
+
+  &__love-btn,
+  &__more-btn{
+    align-self: end;
+  }
+}

@@ -1,0 +1,11 @@
+<div class="dialog">
+  <h1 mat-dialog-title>{{data.name}} songs:</h1>
+  <button mat-icon-button (click)="onCloseClick()">
+    <mat-icon aria-label="Close">close</mat-icon>
+  </button>
+</div>
+<div mat-dialog-content>
+  <mat-list>
+    <mat-list-item *ngFor="let song of data?.songs"> {{song.title}} </mat-list-item>
+  </mat-list>
+</div>
