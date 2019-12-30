@@ -1,7 +1,8 @@
-<div class="scrolling-wrapper">
-  <mat-card *ngFor="let author of authorsList" class="card-horizontal" (click)="onAuthorClick(author)">
+<div class="d-flex flex-nowrap overflow-auto">
+  <mat-card *ngFor="let author of authorsList" class="card-horizontal d-flex justify-content-center align-items-center"
+            (click)="onAuthorClick(author)">
     <mat-card-header>
-      <mat-card-title class="card-horizontal__title">{{author}}</mat-card-title>
+      <mat-card-title class="text-center">{{author}}</mat-card-title>
     </mat-card-header>
   </mat-card>
 </div>

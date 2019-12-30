@@ -1,22 +1,8 @@
-.scrolling-wrapper {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
+.card-horizontal {
+  flex: 0 0 auto;
+  margin: 20px;
+  width: 200px;
+  height: 200px;
 
-  .card-horizontal {
-    flex: 0 0 auto;
-    margin: 20px;
-    width: 200px;
-    height: 200px;
-
-    cursor: pointer;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &__title {
-      text-align: center;
-    }
-  }
+  cursor: pointer;
 }

@@ -1,11 +1,11 @@
-<div class="dialog">
+<div class="w-100 d-flex flex-row justify-content-between">
   <h1 mat-dialog-title>{{data.name}} songs:</h1>
   <button mat-icon-button (click)="onCloseClick()">
     <mat-icon aria-label="Close">close</mat-icon>
   </button>
 </div>
 <div mat-dialog-content>
-  <mat-list>
-    <mat-list-item class="song-item" *ngFor="let song of data?.songs"> {{song.title}} <br></mat-list-item>
-  </mat-list>
+  <ul>
+    <li class="song-item" *ngFor="let song of data?.songs"> {{song.title}} </li>
+  </ul>
 </div>

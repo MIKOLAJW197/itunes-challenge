@@ -1,11 +1,5 @@
-.dialog {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-
 .song-item {
   margin-top: 10px;
   margin-bottom: 10px;
+  list-style-type: none;
 }

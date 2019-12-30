@@ -2,17 +2,19 @@
   <mat-card *ngFor="let song of songsList" [id]="song.id" (click)="openDetails(song)" class="song-card">
     <mat-card-header>
       <div mat-card-avatar class="song-card__avatar" [lazyLoad]="song.img"></div>
-      <div class="song-card__text-wrapper">
-        <mat-card-title class="song-card__title">{{song.title}}</mat-card-title>
-        <mat-card-subtitle class="song-card__subtitle">{{song.author}}</mat-card-subtitle>
+      <div class="w-100">
+        <mat-card-title>{{song.title}}</mat-card-title>
+        <mat-card-subtitle>{{song.author}}</mat-card-subtitle>
       </div>
-      <button mat-icon-button class="song-card__love-btn" [color]="song.isLoved ? 'warn' : 'accent'"
-              (click)="onLoveSong($event, song)">
-        <mat-icon aria-label="Heart">favorite</mat-icon>
-      </button>
-      <button mat-icon-button class="song-card__more-btn" color="accent" (click)="openBottomSheet($event, song)">
-        <mat-icon aria-label="Show more">more_horiz</mat-icon>
-      </button>
+      <div class="d-flex flex-column justify-content-between">
+        <button mat-icon-button [color]="song.isLoved ? 'warn' : 'accent'"
+                (click)="onLoveSong($event, song)">
+          <mat-icon aria-label="Heart">favorite</mat-icon>
+        </button>
+        <button mat-icon-button color="accent" (click)="openBottomSheet($event, song)">
+          <mat-icon aria-label="Show more">more_horiz</mat-icon>
+        </button>
+      </div>
     </mat-card-header>
   </mat-card>
 </div>

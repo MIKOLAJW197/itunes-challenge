@@ -1,7 +1,9 @@
-<div class="scrolling-wrapper">
-  <mat-card *ngFor="let category of categoriesList" class="card-horizontal" (click)="onCategoryClick(category)">
+<div class="d-flex flex-nowrap overflow-auto">
+  <mat-card *ngFor="let category of categoriesList"
+            class="card-horizontal d-flex justify-content-center align-items-center"
+            (click)="onCategoryClick(category)">
     <mat-card-header>
-      <mat-card-title class="card-horizontal__title">{{category}}</mat-card-title>
+      <mat-card-title class="text-center">{{category}}</mat-card-title>
     </mat-card-header>
   </mat-card>
 </div>
