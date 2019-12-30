@@ -5,4 +5,10 @@
   height: 200px;
 
   cursor: pointer;
+
+  transition: background-color 0.5s ease-out;
+
+  &:hover {
+    background-color: #7b1fa2;
+  }
 }
