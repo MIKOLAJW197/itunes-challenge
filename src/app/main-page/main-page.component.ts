@@ -45,6 +45,8 @@ export class MainPageComponent implements OnInit {
     return list.map(r => this.getSongModel(r));
   }
 
+  // note: Move this 3 functions to some helper class
+
   private getAllAuthors(songsList: Song[]): Set<string> {
     return new Set(songsList.map(song => song.author));
   }
