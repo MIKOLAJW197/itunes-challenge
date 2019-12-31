@@ -1,10 +1,20 @@
-<h2 *ngIf="categoriesList.size" class="mt-2 ml-3">Top Categories:</h2>
-<div class="d-flex flex-nowrap overflow-auto">
-  <mat-card *ngFor="let category of categoriesList"
-            class="card-horizontal d-flex justify-content-center align-items-center"
-            (click)="onCategoryClick(category)">
-    <mat-card-header>
-      <mat-card-title class="text-center">{{category}}</mat-card-title>
-    </mat-card-header>
-  </mat-card>
-</div>
+<ng-container *ngIf="categoriesList.size">
+  <h2 class="mt-2 ml-3">Top Categories:</h2>
+  <div class="d-flex flex-row align-items-center">
+    <button mat-icon-button class="d-none d-md-block" (click)="scroll('left')">
+      <mat-icon class="icon-2" aria-label="Slide left">keyboard_arrow_left</mat-icon>
+    </button>
+    <div #scrollCategory class="d-flex flex-nowrap scroll-container">
+      <mat-card *ngFor="let category of categoriesList"
+                class="card-horizontal d-flex justify-content-center align-items-center"
+                (click)="onCategoryClick(category)">
+        <mat-card-header>
+          <mat-card-title class="text-center">{{category}}</mat-card-title>
+        </mat-card-header>
+      </mat-card>
+    </div>
+    <button mat-icon-button class="d-none d-md-block" (click)="scroll('right')">
+      <mat-icon class="icon-2" aria-label="Slide right">keyboard_arrow_right</mat-icon>
+    </button>
+  </div>
+</ng-container>

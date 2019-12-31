@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import {Song} from '../shared/models/song.model';
 import {MatDialog} from '@angular/material';
 import {FilteredSongsModalComponent} from '../filtered-songs-modal/filtered-songs-modal.component';
@@ -12,6 +12,7 @@ export class TopCategoriesListComponent {
 
   @Input() categoriesList: Set<string>;
   @Input() songsList: Song[];
+  @ViewChild('scrollCategory', {static: false}) scrollBar: ElementRef;
 
   constructor(public dialog: MatDialog) {
   }
@@ -21,5 +22,10 @@ export class TopCategoriesListComponent {
       width: '600px',
       data: {name: category, songs: this.songsList.filter(s => s.details.category === category)}
     });
+  }
+
+
+  scroll(value: string) {
+    this.scrollBar.nativeElement.scrollLeft += value === 'left' ? -100 : 100;
   }
 }

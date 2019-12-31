@@ -1,17 +1,32 @@
 h2 {
   color: white;
 }
-.card-horizontal {
-  flex: 0 0 auto;
-  margin: 20px;
-  width: 200px;
-  height: 200px;
 
-  cursor: pointer;
+.scroll-container {
+  overflow-y: hidden;
+  overflow-x: hidden;
 
-  transition: background-color 0.5s ease-out;
-
-  &:hover {
-    background-color: #7b1fa2;
+  @media (max-width: 768px) {
+    overflow-x: scroll;
   }
+
+  .card-horizontal {
+    flex: 0 0 auto;
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+
+    cursor: pointer;
+
+    transition: background-color 0.5s ease-out;
+
+    &:hover {
+      background-color: #7b1fa2;
+    }
+  }
+}
+
+.icon-2 {
+  color: white;
+  transform: scale(2);
 }
